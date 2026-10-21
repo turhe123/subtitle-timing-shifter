@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO:START — the builder rewrites title / description / keywords for search (see CLAUDE.md) -->
+  <title>Subtitle Sync – Shift SRT &amp; VTT Timing Free, In Your Browser</title>
+  <meta name="description" content="Fix out of sync subtitles: shift SRT or VTT timing, fix drift with two-point sync or change frame rate. Free, private, no upload, works offline.">
+  <meta name="keywords" content="subtitle sync, shift srt time, subtitles out of sync fix, srt delay, adjust subtitle timing, srt time shift online, change frame rate subtitles, vtt subtitle shift">
+  <!-- SEO:END -->
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0f14" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://turhe123.github.io/subtitle-timing-shifter/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Subtitle Timing Shifter – Free, Private, In Your Browser">
+  <meta property="og:description" content="Shift or stretch SRT and VTT subtitle timing to fix out of sync captions in your browser, no upload. Free and open source, nothing is uploaded, works offline.">
+  <meta property="og:url" content="https://turhe123.github.io/subtitle-timing-shifter/">
+  <meta property="og:image" content="https://turhe123.github.io/subtitle-timing-shifter/docs/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Subtitle Timing Shifter">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Subtitle Timing Shifter – Free, Private, In Your Browser">
+  <meta name="twitter:description" content="Shift or stretch SRT and VTT subtitle timing to fix out of sync captions in your browser, no upload. Free and open source, nothing is uploaded, works offline.">
+  <meta name="twitter:image" content="https://turhe123.github.io/subtitle-timing-shifter/docs/og.png">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Subtitle Timing Shifter",
+    "alternateName": "Subtitle Timing Shifter – Free, Private, In Your Browser",
+    "description": "Shift or stretch SRT and VTT subtitle timing to fix out of sync captions in your browser, no upload. Free and open source, nothing is uploaded, works offline.",
+    "url": "https://turhe123.github.io/subtitle-timing-shifter/",
+    "image": "https://turhe123.github.io/subtitle-timing-shifter/docs/og.png",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript. Works offline after the first visit.",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "license": "https://opensource.org/licenses/MIT",
+    "softwareVersion": "1.0.0",
+    "author": { "@type": "Person", "name": "Or Davidai Bachar", "url": "https://github.com/turhe123" },
+    "sameAs": ["https://github.com/turhe123/subtitle-timing-shifter"]
+  }
+  </script>
+  
+  <!-- Page views are counted with GoatCounter: no cookies, no personal data, open source. -->
+  <script data-goatcounter="https://turhe123.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#tool">Skip to the tool</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="./" aria-label="Subtitle Timing Shifter home">
+        <img class="brand__icon" src="icon.svg" alt="" width="28" height="28">
+        <span class="brand__name">Subtitle Timing Shifter</span>
+      </a>
+      <nav class="site-nav" aria-label="Page">
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/turhe123/subtitle-timing-shifter" rel="noopener">GitHub</a>
+        <a href="https://turhe123.github.io/web-tools/" rel="noopener" class="site-nav__more">More tools</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <!-- HERO:START — the builder may refine the headline and promise; keep the trust badges -->
+      <h1 class="hero__title">Subtitle Timing Shifter</h1>
+      <p class="hero__lead">Shift or stretch SRT and VTT subtitle timing to fix out of sync captions in your browser, no upload.</p>
+      <!-- HERO:END -->
+      <ul class="badges" aria-label="Why this tool is safe to use">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Runs in your browser, files never leave your device</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Free, open source, no account, no ads</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Works offline after the first visit</li>
+      </ul>
+    </section>
+
+    <section class="container" id="tool" aria-labelledby="tool-title">
+      <div class="tool-card">
+        <!-- TOOL:START — the builder replaces everything between these markers with the real tool UI -->
+        <h2 id="tool-title" class="visually-hidden">Shift subtitle timing</h2>
+        <div class="sts-input">
+          <div class="dropzone dropzone--compact" id="dropzone" tabindex="0" role="button" aria-label="Choose an SRT or VTT file or drop it here">
+            <label class="visually-hidden" for="file-input">Choose an SRT or VTT subtitle file</label>
+            <input class="dropzone__input" id="file-input" type="file" accept=".srt,.vtt,text/vtt,application/x-subrip" aria-describedby="dropzone-hint">
+            <svg class="dropzone__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0-4 4m4-4 4 4M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="dropzone__title">Drop an .srt or .vtt file or <span class="link">choose a file</span></p>
+            <p class="dropzone__hint" id="dropzone-hint">Nothing is uploaded. Everything happens on this device.</p>
+          </div>
+          <div class="field sts-paste">
+            <label for="paste">Or paste subtitle text</label>
+            <textarea id="paste" class="mono" spellcheck="false" placeholder="1&#10;00:00:01,000 --> 00:00:03,500&#10;Hello there." aria-describedby="paste-hint"></textarea>
+            <span class="field__hint" id="paste-hint">SRT or WebVTT. Updates as you type.</span>
+          </div>
+        </div>
+
+        <div class="sts-loaded result" id="loaded" hidden>
+          <div class="result__meta">
+            <div class="result__name" id="loaded-name"></div>
+            <div class="result__info" id="loaded-info"></div>
+          </div>
+          <button class="btn btn--small btn--ghost" id="clear" type="button">Clear</button>
+        </div>
+
+        <div class="sts-controls">
+          <div class="tabs" role="tablist" aria-label="Timing mode">
+            <button class="tab" role="tab" id="tab-offset" aria-controls="panel-offset" aria-selected="true" type="button">Offset</button>
+            <button class="tab" role="tab" id="tab-sync" aria-controls="panel-sync" aria-selected="false" tabindex="-1" type="button">Two-point sync</button>
+            <button class="tab" role="tab" id="tab-fps" aria-controls="panel-fps" aria-selected="false" tabindex="-1" type="button">Frame rate</button>
+          </div>
+
+          <div class="sts-panel" role="tabpanel" id="panel-offset" aria-labelledby="tab-offset">
+            <div class="field">
+              <label for="offset">Shift all cues by (seconds)</label>
+              <div class="sts-offset">
+                <button class="btn btn--small" type="button" data-step="-1000" aria-label="Minus 1 second">−1 s</button>
+                <button class="btn btn--small" type="button" data-step="-100" aria-label="Minus 0.1 second">−0.1</button>
+                <input type="text" id="offset" class="mono" value="0.0" autocomplete="off" spellcheck="false" aria-describedby="offset-hint">
+                <button class="btn btn--small" type="button" data-step="100" aria-label="Plus 0.1 second">+0.1</button>
+                <button class="btn btn--small" type="button" data-step="1000" aria-label="Plus 1 second">+1 s</button>
+              </div>
+              <span class="field__hint" id="offset-hint">Negative makes subtitles appear earlier. Accepts 2.5, -2,5 or -00:01:02,500. <span class="kbd">↑</span>/<span class="kbd">↓</span> step 0.1 s, with <span class="kbd">Shift</span> 1 s.</span>
+            </div>
+          </div>
+
+          <div class="sts-panel" role="tabpanel" id="panel-sync" aria-labelledby="tab-sync" hidden>
+            <p class="field__hint sts-panel__intro">Type when two lines are really spoken. Everything in between is stretched to match, which fixes subtitles that drift out of sync.</p>
+            <div class="sts-sync">
+              <div class="field">
+                <label for="sync-a-num">First cue number</label>
+                <input type="number" id="sync-a-num" min="1" step="1" value="1" inputmode="numeric">
+              </div>
+              <div class="field">
+                <label for="sync-a-time">Should start at</label>
+                <input type="text" id="sync-a-time" class="mono" placeholder="00:00:01,000" autocomplete="off" spellcheck="false" aria-describedby="sync-a-hint">
+              </div>
+              <p class="field__hint sts-sync__hint" id="sync-a-hint"></p>
+              <div class="field">
+                <label for="sync-b-num">Later cue number</label>
+                <input type="number" id="sync-b-num" min="1" step="1" value="2" inputmode="numeric">
+              </div>
+              <div class="field">
+                <label for="sync-b-time">Should start at</label>
+                <input type="text" id="sync-b-time" class="mono" placeholder="00:42:10,500" autocomplete="off" spellcheck="false" aria-describedby="sync-b-hint">
+              </div>
+              <p class="field__hint sts-sync__hint" id="sync-b-hint"></p>
+            </div>
+          </div>
+
+          <div class="sts-panel" role="tabpanel" id="panel-fps" aria-labelledby="tab-fps" hidden>
+            <div class="sts-fps">
+              <div class="field">
+                <label for="fps-from">Subtitles were timed for</label>
+                <select id="fps-from">
+                  <option value="23.976">23.976 fps</option><option value="24">24 fps</option><option value="25" selected>25 fps</option>
+                  <option value="29.97">29.97 fps</option><option value="30">30 fps</option><option value="50">50 fps</option>
+                  <option value="59.94">59.94 fps</option><option value="60">60 fps</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="fps-to">Your video plays at</label>
+                <select id="fps-to">
+                  <option value="23.976" selected>23.976 fps</option><option value="24">24 fps</option><option value="25">25 fps</option>
+                  <option value="29.97">29.97 fps</option><option value="30">30 fps</option><option value="50">50 fps</option>
+                  <option value="59.94">59.94 fps</option><option value="60">60 fps</option>
+                </select>
+              </div>
+            </div>
+            <p class="field__hint">Typical case: subtitles made for a 25 fps (PAL) release drift later and later on a 23.976 fps file.</p>
+          </div>
+
+          <div class="field sts-from">
+            <label for="from-cue">Apply from cue number</label>
+            <input type="number" id="from-cue" min="1" step="1" value="1" inputmode="numeric" aria-describedby="from-cue-hint">
+            <span class="field__hint" id="from-cue-hint">Cues before this number keep their times. Leave at 1 to change every cue.</span>
+          </div>
+        </div>
+
+        <div class="results" id="results" aria-live="polite"></div>
+
+        <div class="sts-empty" id="empty">
+          <p><strong>Example:</strong> subtitles show up two seconds late. Shift by <code>-2.0</code> and a cue at <code>00:00:05,000</code> moves to <code>00:00:03,000</code>.</p>
+          <button class="btn" id="try-example" type="button">Try it with an example file</button>
+        </div>
+
+        <div class="sts-output" id="output" hidden>
+          <div class="table-wrap sts-table-wrap" id="table-wrap" tabindex="0" aria-label="Cue preview, old and new start times">
+            <table class="sts-table" id="preview">
+              <thead><tr><th scope="col">#</th><th scope="col">Old start</th><th scope="col">New start</th><th scope="col">Text</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="row row--between sts-actions">
+            <button class="btn btn--small btn--ghost" id="show-all" type="button" hidden>Show all cues</button>
+            <div class="row sts-actions__main">
+              <button class="btn" id="copy" type="button">Copy text</button>
+              <button class="btn btn--primary" id="download" type="button">Download</button>
+            </div>
+          </div>
+        </div>
+        <!-- TOOL:END -->
+      </div>
+    </section>
+
+    <section class="container section" id="how" aria-labelledby="how-title">
+      <h2 id="how-title" class="section__title">How it works</h2>
+      <!-- HOW:START — three honest steps for this tool -->
+      <ol class="steps">
+        <li><strong>Load your subtitles.</strong> Drop an .srt or .vtt file, or paste the text. It is read on your device, never uploaded.</li>
+        <li><strong>Fix the timing.</strong> Shift by a fixed amount, sync two lines to their real times to fix drift, or convert between frame rates. The table shows old and new times live.</li>
+        <li><strong>Save the synced file.</strong> Download it in the same format with “synced” added to the name, or copy the text. Cue text, tags and styling stay exactly as they were.</li>
+      </ol>
+      <!-- HOW:END -->
+    </section>
+
+    <section class="container section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="section__title">Questions, answered</h2>
+      <!-- FAQ:START — 4 to 6 questions; keep the privacy, offline and AI answers -->
+      <details class="faq" open>
+        <summary>Are my subtitle files uploaded anywhere?</summary>
+        <p>No. Subtitle Timing Shifter runs entirely in your browser. Your file is read into memory on your device, processed with JavaScript, and never sent to a server. You can disconnect from the internet and it keeps working.</p>
+      </details>
+      <details class="faq">
+        <summary>The subtitles start in sync but drift later. How do I fix that?</summary>
+        <p>A constant offset will not help with drift. Use Two-point sync: enter the real start time of an early line and of a late line, and every cue is stretched between them. If the drift comes from a frame rate mismatch, for example 25 fps subtitles on a 23.976 fps video, the Frame rate tab does the same with one click.</p>
+      </details>
+      <details class="faq">
+        <summary>Will it change my text, styling or encoding?</summary>
+        <p>Only the time codes change. Cue numbers, identifiers, italics and other tags, WebVTT headers, notes and position settings are kept as they were, along with the original line endings. Files in older encodings such as Windows-1252 or UTF-16 are saved as UTF-8, and the tool says when that happens.</p>
+      </details>
+      <details class="faq">
+        <summary>Is it really free?</summary>
+        <p>Yes. It is open source under the MIT license, with no account, no daily limits and no ads. If it saves you a paid subscription, you can say thanks on Ko-fi.</p>
+      </details>
+      <details class="faq">
+        <summary>Does it work offline?</summary>
+        <p>Yes. After your first visit the page is cached by a service worker, so it loads without a connection. You can also install it from your browser's menu as an app.</p>
+      </details>
+      <details class="faq">
+        <summary>Was this written by AI?</summary>
+        <p>Yes. Subtitle Timing Shifter was generated by Claude Code from a written specification inside an automated pipeline, with a test suite that runs in a real browser. The full source is on GitHub, so you can read every line before you trust it with your files.</p>
+      </details>
+      <!-- FAQ:END -->
+    </section>
+
+    <section class="container section" id="support">
+      <div class="support-card">
+        <h2 class="section__title">Built by one person, given away for free</h2>
+        <p>Subtitle Timing Shifter is a free alternative to paid tools like Subtitle Tools Sync and online subtitle shifters. If it earns a place in your bookmarks, a coffee keeps the updates coming.</p>
+        <a class="btn btn--kofi" href="https://ko-fi.com/leodavidai" rel="noopener">☕ Support Or on Ko-fi</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__links">
+        <a href="https://github.com/turhe123/subtitle-timing-shifter" rel="noopener">Source on GitHub</a> ·
+        <a href="https://github.com/turhe123/subtitle-timing-shifter/issues" rel="noopener">Report a bug</a> ·
+        <a href="https://turhe123.github.io/web-tools/" rel="noopener">More free web tools</a> ·
+        <a href="https://ko-fi.com/leodavidai" rel="noopener">Ko-fi</a>
+      </p>
+      <p class="site-footer__disclosure"><strong>Built with AI.</strong> Subtitle Timing Shifter was written by Claude Code inside an automated pipeline from a plain-English spec, as a clean-room implementation: no code or assets from any commercial product. It runs entirely in your browser, makes no network requests except an anonymous, cookieless page-view count, and has had less human review than hand-written software. Bug reports and pull requests are welcome.</p>
+      <p class="site-footer__copy">© 2026 Or Davidai Bachar · MIT License · <span id="sw-status" class="sw-status" aria-live="polite"></span></p>
+    </div>
+  </footer>
+
+  <script type="module" src="site.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
